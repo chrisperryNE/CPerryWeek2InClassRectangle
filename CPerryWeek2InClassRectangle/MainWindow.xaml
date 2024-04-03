@@ -13,19 +13,39 @@
         </Grid.RowDefinitions>
 
 
-        <Label Content="Change the area of the rectangle with the sliders" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Change the area of the shape with the sliders" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
 
-        <Rectangle x:Name="rectangle" Fill="#FFF4F4F5" HorizontalAlignment="Center" Height="100" Margin="0,0,0,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Center" Width="200" MaxWidth="780" MaxHeight="280"/>
+        <Rectangle x:Name="mainRectangle" Fill="#FFF4F4F5" HorizontalAlignment="Center" Height="100" Margin="0,0,0,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Center" Width="200" MaxHeight="280" Visibility="Hidden"/>
+
+        <Ellipse x:Name="mainEllipse" Fill="#FFF4F4F5" HorizontalAlignment="Center" Height="100" Margin="0,0,0,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Center" Width="200" Visibility="Hidden"/>
 
         <Label Content="Height" HorizontalAlignment="Left" Margin="12,36,0,0" VerticalAlignment="Top"/>
 
-        <Label Content="Width" HorizontalAlignment="Left" Margin="12,59,0,0" VerticalAlignment="Top"/>
+        <Label Content="Area" HorizontalAlignment="Left" Margin="12,59,0,0" VerticalAlignment="Top"/>
 
-        <Slider x:Name="heightSlider" HorizontalAlignment="Left" Margin="62,41,0,0" VerticalAlignment="Top" Width="280" ValueChanged="heightSlider_ValueChanged" Maximum="280" Minimum="40"/>
+        <Slider x:Name="heightSlider" HorizontalAlignment="Left" Margin="62,41,0,0" VerticalAlignment="Top" Width="280" ValueChanged="heightSlider_ValueChanged" Maximum="280" Minimum="50" TickFrequency="10" TickPlacement="BottomRight" IsSnapToTickEnabled="True"/>
 
-        <Slider x:Name="widthSlider" HorizontalAlignment="Left" Margin="62,64,0,0" VerticalAlignment="Top" Width="280" ValueChanged="widthSlider_ValueChanged" Maximum="760" Minimum="80"/>
+        <Slider x:Name="areaSlider" HorizontalAlignment="Left" Margin="62,64,0,0" VerticalAlignment="Top" Width="280" ValueChanged="areaSlider_ValueChanged" Maximum="212800" Minimum="100" TickFrequency="10" TickPlacement="BottomRight"/>
 
-     
+        <Rectangle x:Name="selectRectangle" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="35" Margin="483,50,0,0" Stroke="Black" VerticalAlignment="Top" Width="68" MouseDown="selectRectangle_MouseDown"/>
+
+
+
+        <Ellipse x:Name="selectEllipse" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="50" Margin="622,41,0,0" Stroke="Black" VerticalAlignment="Top" Width="50" MouseDown="selectEllipse_MouseDown" />
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
